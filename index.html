@@ -1,9 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello World</title>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="creeatore_platform">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <title>creeatore_platform</title>
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage-compat.js"></script>
+
+  <script>
+    // Initialize Firebase first
+    var firebaseConfig = {
+      apiKey: "AIzaSyCZC9u3H2fR5_9Mbp-KKHvLZigliFp3h-8",
+      authDomain: "creeatore-platform.firebaseapp.com",
+      projectId: "creeatore-platform",
+      storageBucket: "creeatore-platform.appspot.com",
+      messagingSenderId: "1012647111548",
+      appId: "1:1012647111548:web:a2e1b9e0f3b8f3b3f3b8f3",
+      measurementId: "G-8GSGZQ44ST"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="flutter.js" defer></script>
+  
+  <script>
+    const serviceWorkerVersion = "2673505947";
+    
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
 </head>
 <body>
-    <h1>Hello World</h1>
+  <div id="flutter_app"></div>
 </body>
 </html>
